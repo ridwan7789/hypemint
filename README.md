@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# HypeMint ($HMNT) - Premium Cryptocurrency Project
 
-## Project info
+Welcome to the official repository for HypeMint ($HMNT), a premium cryptocurrency project built on innovative DeFi solutions and unique tokenomics.
 
-**URL**: https://lovable.dev/projects/0eeb6761-f70b-428e-9abd-822bc3b32a9b
+## Project Overview
 
-## How can I edit this code?
+HypeMint ($HMNT) represents the next generation of cryptocurrency projects, featuring:
+- Advanced DeFi mechanisms
+- Unique tokenomics model
+- Community-driven governance
+- Secure smart contracts
 
-There are several ways of editing your application.
+## Official Links
+- **Website**: https://hypemint.online
+- **Whitepaper**: https://app.gitbook.com/o/F2li4dnW8QF5JBrjKBVB/s/gPO1rPhR6jG9ENXLKciM/
+- **Contract Address**: `0xA77b64954d591586fD26d052616617Bc8E4c273D`
+- **Telegram**: https://t.me/Hype_Mint
+- **Twitter/X**: https://x.com/HypeMintX
+- **TikTok**: https://tiktok.com/@hypemintofficial
+- **YouTube**: https://youtube.com/@HypeMintOfficial
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0eeb6761-f70b-428e-9abd-822bc3b32a9b) and start prompting.
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. Clone the repository
+```bash
+git clone https://github.com/ridwan7789/hypemint.git
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Navigate to the project directory
+```bash
+cd hypemint
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. Install dependencies
+```bash
+npm install
+```
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Development Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start the development server
+- `npm run build` - Create a production build
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint to check for code issues
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Technologies Used
 
-## What technologies are used for this project?
+- **Framework**: React with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Router**: React Router DOM
+- **State Management**: TanStack Query
+- **Animations**: Custom CSS animations
 
-This project is built with:
+## Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Modern, cyberpunk-themed UI design
+- Responsive layout for all devices
+- Copy-to-clipboard functionality for contract address
+- Social media integration
+- Whitepaper access button
+- SEO optimized
 
-## How can I deploy this project?
+## Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/0eeb6761-f70b-428e-9abd-822bc3b32a9b) and click on Share -> Publish.
+We welcome contributions from the community! Please read our contributing guidelines before submitting pull requests.
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Security
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Security is paramount to HypeMint. All smart contracts undergo rigorous auditing processes. Always verify contract addresses before interacting with them.
+
+**Official Contract Address:**
+```
+0xA77b64954d591586fD26d052616617Bc8E4c273D
+```
+
+## Support
+
+For support, please join our Telegram community: https://t.me/Hype_Mint
+
+## Disclaimer
+
+Cryptocurrency investments carry risk. Please do your own research before investing in any cryptocurrency project.

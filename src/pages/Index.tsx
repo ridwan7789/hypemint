@@ -1,18 +1,33 @@
-import { Send, Twitter, Music, Globe, Youtube } from "lucide-react";
+import { Send, Twitter, Music, Globe, Youtube, Copy, FileText } from "lucide-react";
 import CyberpunkBackground from "@/components/CyberpunkBackground";
 import LoadingBar from "@/components/LoadingBar";
 import SocialButton from "@/components/SocialButton";
 import logo from "@/assets/hypemint-logo.png";
 
 const Index = () => {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("0xA77b64954d591586fD26d052616617Bc8E4c273D");
+  };
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-background">
       {/* Animated background */}
       <CyberpunkBackground />
 
       {/* Radial gradient overlay */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] 
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]
                       from-primary/5 via-transparent to-transparent pointer-events-none" />
+
+      {/* Whitepaper button in top-right corner */}
+      <a
+        href="https://app.gitbook.com/o/F2li4dnW8QF5JBrjKBVB/s/gPO1rPhR6jG9ENXLKciM/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed top-4 right-4 z-50 bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-lg px-4 py-2 text-sm font-orbitron text-primary hover:bg-primary/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/20 flex items-center gap-2"
+      >
+        <FileText size={16} />
+        <span>WHITEPAPER</span>
+      </a>
 
       {/* Main content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-12">
@@ -21,9 +36,9 @@ const Index = () => {
           {/* Outer glow rings */}
           <div className="absolute inset-0 blur-3xl opacity-40 animate-pulse-glow"
                style={{ background: "radial-gradient(circle, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, transparent 70%)" }} />
-          
+
           <div className="absolute inset-0 blur-2xl opacity-30 animate-pulse-glow"
-               style={{ 
+               style={{
                  background: "radial-gradient(circle, hsl(var(--accent)) 0%, transparent 60%)",
                  animationDelay: "1s"
                }} />
@@ -58,8 +73,30 @@ const Index = () => {
           ))}
         </div>
 
+        {/* Official CA address with cyberpunk effect and copy functionality */}
+        <div className="mb-8 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/30 to-primary/30 rounded-lg blur-2xl opacity-60 animate-pulse"></div>
+          <div
+            className="relative font-orbitron text-sm md:text-base text-center bg-black/70 px-6 py-3 rounded-lg border border-primary/30 backdrop-blur-sm text-primary/90 tracking-wider cursor-pointer group hover:bg-black/80 transition-colors"
+            onClick={copyToClipboard}
+          >
+            OFFICIAL CA : <span className="text-white font-bold tracking-normal">0xA77b64954d591586fD26d052616617Bc8E4c273D</span>
+            <button
+              className="ml-2 text-primary/70 group-hover:text-primary/100 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                copyToClipboard();
+              }}
+              aria-label="Copy address"
+            >
+              <Copy size={16} />
+            </button>
+          </div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
         {/* Main title */}
-        <h1 className="font-orbitron text-3xl md:text-5xl font-bold text-center mb-4 
+        <h1 className="font-orbitron text-3xl md:text-5xl font-bold text-center mb-4
                        bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent
                        drop-shadow-[0_0_10px_hsl(var(--primary)/0.5)]">
           WEBSITE IS UNDER DEVELOPMENT
@@ -95,7 +132,7 @@ const Index = () => {
           <SocialButton
             icon={<Globe className="w-5 h-5" />}
             label="Website"
-            url="https://hypemint.tech"
+            url="https://hypemint.online"
           />
           <SocialButton
             icon={<Youtube className="w-5 h-5" />}
