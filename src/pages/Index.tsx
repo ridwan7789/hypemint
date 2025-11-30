@@ -1,11 +1,111 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Send, Twitter, Music, Globe, Youtube } from "lucide-react";
+import CyberpunkBackground from "@/components/CyberpunkBackground";
+import LoadingBar from "@/components/LoadingBar";
+import SocialButton from "@/components/SocialButton";
+import logo from "@/assets/hypemint-logo.png";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative min-h-screen w-full overflow-hidden bg-background">
+      {/* Animated background */}
+      <CyberpunkBackground />
+
+      {/* Radial gradient overlay */}
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] 
+                      from-primary/5 via-transparent to-transparent pointer-events-none" />
+
+      {/* Main content */}
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-12">
+        {/* Logo with holographic glow */}
+        <div className="relative mb-12 animate-float">
+          {/* Outer glow rings */}
+          <div className="absolute inset-0 blur-3xl opacity-40 animate-pulse-glow"
+               style={{ background: "radial-gradient(circle, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, transparent 70%)" }} />
+          
+          <div className="absolute inset-0 blur-2xl opacity-30 animate-pulse-glow"
+               style={{ 
+                 background: "radial-gradient(circle, hsl(var(--accent)) 0%, transparent 60%)",
+                 animationDelay: "1s"
+               }} />
+
+          {/* Logo container */}
+          <div className="relative">
+            <img
+              src={logo}
+              alt="HypeMint Logo"
+              className="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-[0_0_30px_hsl(var(--primary)/0.6)]"
+              style={{
+                filter: "drop-shadow(0 0 50px hsl(var(--primary) / 0.5)) drop-shadow(0 0 80px hsl(var(--secondary) / 0.3))",
+              }}
+            />
+          </div>
+
+          {/* Particle effects */}
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 rounded-full animate-particle-float"
+              style={{
+                background: i % 3 === 0 ? "hsl(var(--primary))" : i % 3 === 1 ? "hsl(var(--secondary))" : "hsl(var(--accent))",
+                left: "50%",
+                top: "50%",
+                "--tx": `${Math.cos((i / 12) * Math.PI * 2) * 150}px`,
+                "--ty": `${Math.sin((i / 12) * Math.PI * 2) * 150}px`,
+                animationDelay: `${i * 0.3}s`,
+                boxShadow: "0 0 10px currentColor",
+              } as React.CSSProperties}
+            />
+          ))}
+        </div>
+
+        {/* Main title */}
+        <h1 className="font-orbitron text-3xl md:text-5xl font-bold text-center mb-4 
+                       bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent
+                       drop-shadow-[0_0_10px_hsl(var(--primary)/0.5)]">
+          WEBSITE IS UNDER DEVELOPMENT
+        </h1>
+
+        {/* Subtext */}
+        <p className="font-orbitron text-sm md:text-base text-muted-foreground text-center mb-8 max-w-md">
+          Join to Official Community for Latest Updates
+        </p>
+
+        {/* Loading bar */}
+        <div className="w-full max-w-md mb-12">
+          <LoadingBar />
+        </div>
+
+        {/* Social buttons */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl">
+          <SocialButton
+            icon={<Send className="w-5 h-5" />}
+            label="Telegram"
+            url="https://t.me/Hype_Mint"
+          />
+          <SocialButton
+            icon={<Twitter className="w-5 h-5" />}
+            label="X (Twitter)"
+            url="https://x.com/HypeMintX"
+          />
+          <SocialButton
+            icon={<Music className="w-5 h-5" />}
+            label="TikTok"
+            url="https://tiktok.com/@hypemintofficial"
+          />
+          <SocialButton
+            icon={<Globe className="w-5 h-5" />}
+            label="Website"
+            url="https://hypemint.tech"
+          />
+          <SocialButton
+            icon={<Youtube className="w-5 h-5" />}
+            label="YouTube"
+            url="https://youtube.com/@HypeMintOfficial"
+          />
+        </div>
+
+        {/* Bottom accent line */}
+        <div className="mt-12 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
       </div>
     </div>
   );
