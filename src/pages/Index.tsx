@@ -20,7 +20,7 @@ const Index = () => {
 
       {/* Whitepaper button in top-right corner */}
       <a
-        href="https://app.gitbook.com/o/F2li4dnW8QF5JBrjKBVB/s/gPO1rPhR6jG9ENXLKciM/"
+        href="https://docs.hypemint.online"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed top-4 right-4 z-50 bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-lg px-4 py-2 text-sm font-orbitron text-primary hover:bg-primary/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/20 flex items-center gap-2"

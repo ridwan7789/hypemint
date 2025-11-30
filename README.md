@@ -12,7 +12,7 @@ HypeMint ($HMNT) represents the next generation of cryptocurrency projects, feat
 
 ## Official Links
 - **Website**: https://hypemint.online
-- **Whitepaper**: https://app.gitbook.com/o/F2li4dnW8QF5JBrjKBVB/s/gPO1rPhR6jG9ENXLKciM/
+- **Whitepaper**: https://docs.hypemint.online
 - **Contract Address**: `0xA77b64954d591586fD26d052616617Bc8E4c273D`
 - **Telegram**: https://t.me/Hype_Mint
 - **Twitter/X**: https://x.com/HypeMintX
