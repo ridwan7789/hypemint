@@ -5,10 +5,6 @@ import SocialButton from "@/components/SocialButton";
 import logo from "@/assets/hypemint-logo.png";
 
 const Index = () => {
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText("0xA77b64954d591586fD26d052616617Bc8E4c273D");
-  };
-
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-background">
       {/* Animated background */}
@@ -71,28 +67,6 @@ const Index = () => {
               } as React.CSSProperties}
             />
           ))}
-        </div>
-
-        {/* Official CA address with cyberpunk effect and copy functionality */}
-        <div className="mb-8 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/30 to-primary/30 rounded-lg blur-2xl opacity-60 animate-pulse"></div>
-          <div
-            className="relative font-orbitron text-sm md:text-base text-center bg-black/70 px-6 py-3 rounded-lg border border-primary/30 backdrop-blur-sm text-primary/90 tracking-wider cursor-pointer group hover:bg-black/80 transition-colors"
-            onClick={copyToClipboard}
-          >
-            OFFICIAL CA : <span className="text-white font-bold tracking-normal">0xA77b64954d591586fD26d052616617Bc8E4c273D</span>
-            <button
-              className="ml-2 text-primary/70 group-hover:text-primary/100 transition-colors"
-              onClick={(e) => {
-                e.stopPropagation();
-                copyToClipboard();
-              }}
-              aria-label="Copy address"
-            >
-              <Copy size={16} />
-            </button>
-          </div>
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
         </div>
 
         {/* Main title */}
