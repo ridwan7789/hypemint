@@ -95,6 +95,26 @@ const Index = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
         </div>
 
+        {/* $HMNT Chart and Buy Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-8 z-20">
+          <a
+            href="https://www.dextools.io/app/en/bnb/pair-explorer/0xa9c3066c65d557ca44ddd9604dc90f6af1429c71?t=1764590955911"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-orbitron text-sm md:text-base text-center bg-black/70 px-6 py-3 rounded-lg border border-primary/30 backdrop-blur-sm text-primary/90 tracking-wider hover:bg-primary/20 transition-colors flex-1 min-w-[200px]"
+          >
+            $HMNT CHART
+          </a>
+          <a
+            href="https://pancakeswap.finance/swap?chain=bsc&chainOut=bsc&inputCurrency=BNB&outputCurrency=0x7aF0fB46b925a641D68F2858eaF720D39e0f5b64&exactAmount=&exactField=INPUT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-orbitron text-sm md:text-base text-center bg-black/70 px-6 py-3 rounded-lg border border-primary/30 backdrop-blur-sm text-primary/90 tracking-wider hover:bg-primary/20 transition-colors flex-1 min-w-[200px]"
+          >
+            $HMNT BUY
+          </a>
+        </div>
+
         {/* Main title */}
         <h1 className="font-orbitron text-3xl md:text-5xl font-bold text-center mb-4
                        bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent
